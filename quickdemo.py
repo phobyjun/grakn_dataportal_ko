@@ -1,6 +1,6 @@
 from grakn.client import GraknClient
 
-with GraknClient(uri="localhost:48555") as client:
+with GraknClient(uri="dasom.io:48555") as client:
     with client.session(keyspace="social_network") as session:
         with session.transaction().write() as write_transaction:
             insert_iterator = write_transaction.query('insert $x isa person, has email "x@email.com";')
